@@ -151,15 +151,14 @@ function prFrame () {
             return height;
         }
         function setIframeHeight() {
-            var ifrm = element[0];
+            var ifrm = element[0],height;
             var doc = ifrm.contentDocument? ifrm.contentDocument:
                 ifrm.contentWindow.document;
-            ifrm.style.visibility = 'hidden';
-            ifrm.style.height = "10px"; // reset to minimal height ...
+            element.css('visibility','hidden');
+            height = getDocHeight( doc ) + 4 + "px"; // reset to minimal height ...
             // IE opt. for bing/msn needs a bit added or scrollbar appears
-            ifrm.style.height = getDocHeight( doc ) + 4 + "px";
-            ifrm.style.visibility = 'visible';
-            console.log("height is",ifrm.style.height);
+            element.css('height',height);
+            element.css('visibility','visible');
         }
         scope.$watch('projectUrl',function(newVal){
             if(newVal){
