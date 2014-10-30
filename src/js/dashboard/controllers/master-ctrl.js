@@ -49,8 +49,8 @@ $scope.jsComponents=[
         link:"http://pashanitw.github.io/paint/"
     },
     {
-        name: "Fb App",
-        link:"http://pashanitw.github.io/Html5-Canvas-PolarClock"
+        name: "html5 video",
+        link:"http://pashanitw.github.io/media/"
     }
 ];
     $scope.setProject = function (project) {
