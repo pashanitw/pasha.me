@@ -74,8 +74,8 @@ $scope.jsComponents=[
         link:"http://pashanitw.github.io/paint/"
     },
     {
-        name: "Fb App",
-        link:"http://pashanitw.github.io/Html5-Canvas-PolarClock"
+        name: "html5 video",
+        link:"http://pashanitw.github.io/media/"
     }
 ];
     $scope.setProject = function (project) {
@@ -155,16 +155,18 @@ function prFrame () {
             var doc = ifrm.contentDocument? ifrm.contentDocument:
                 ifrm.contentWindow.document;
             element.css('visibility','hidden');
-            height = getDocHeight( doc ) + 4 + "px"; // reset to minimal height ...
+             // reset to minimal height ...
             // IE opt. for bing/msn needs a bit added or scrollbar appears
-            ifrm.contentWindow.onload=function(){
+            ifrm.onload=function(){
+                height = getDocHeight( doc ) + 4 + "px";
                 element.css('height',height);
                 element.css('visibility','visible');
+                console.log("height is",heig)
             }
         }
         scope.$watch('projectUrl',function(newVal){
             if(newVal){
-                setIframeHeight();
+               // setIframeHeight();
             }
         })
     }
