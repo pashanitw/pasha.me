@@ -157,8 +157,10 @@ function prFrame () {
             element.css('visibility','hidden');
             height = getDocHeight( doc ) + 4 + "px"; // reset to minimal height ...
             // IE opt. for bing/msn needs a bit added or scrollbar appears
-            element.css('height',height);
-            element.css('visibility','visible');
+            ifrm.contentWindow.onload=function(){
+                element.css('height',height);
+                element.css('visibility','visible');
+            }
         }
         scope.$watch('projectUrl',function(newVal){
             if(newVal){
