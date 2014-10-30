@@ -2,9 +2,9 @@
  * Master Controller
  */
 angular.module('Dashboard')
-    .controller('MasterCtrl', ['$scope', '$cookieStore', MasterCtrl]);
+    .controller('MasterCtrl', ['$scope', '$cookieStore','$sce', MasterCtrl]);
 
-function MasterCtrl($scope, $cookieStore) {
+function MasterCtrl($scope, $cookieStore,$sce) {
     /**
      * Sidebar Toggle & Cookie Control
      *
@@ -39,7 +39,24 @@ function MasterCtrl($scope, $cookieStore) {
         }
 
     });
-
+$scope.jsComponents=[
+    {
+        name: "Polar Clock",
+        link:"http://pashanitw.github.io/Html5-Canvas-PolarClock"
+    },
+    {
+        name: "Paint App",
+        link:"http://pashanitw.github.io/paint/"
+    },
+    {
+        name: "Fb App",
+        link:"http://pashanitw.github.io/Html5-Canvas-PolarClock"
+    }
+];
+    $scope.setProject = function (project) {
+        $scope.currentProject = project;
+        $scope.currentProjectUrl = $sce.trustAsResourceUrl($scope.currentProject.link);
+    }
     $scope.toggleSidebar = function() 
     {
         $scope.toggle = ! $scope.toggle;

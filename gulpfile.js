@@ -15,6 +15,12 @@ var paths = {
   bower_components: 'src/bower_components/**/*.*',
 };
 
+var deploy = require('gulp-gh-pages');
+
+gulp.task('deploy', function () {
+    return gulp.src('./dist/**/*')
+        .pipe(deploy(options));
+});
 
 gulp.task('usemin', function() {
   return gulp.src(paths.index)
