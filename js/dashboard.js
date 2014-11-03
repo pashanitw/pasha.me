@@ -76,8 +76,41 @@ $scope.jsComponents=[
     {
         name: "html5 video",
         link:"http://pashanitw.github.io/media/"
+    },
+    {
+        name: "Ripple Effect",
+        link:"http://pashanitw.github.io/ripple-effect/"
     }
 ];
+$scope.css3=[
+    {
+        name: "Morphing Cubes",
+        link:"http://pashanitw.github.io/Html5-Canvas-PolarClock"
+    },
+    {
+        name: "Flip Clock",
+        link:"http://pashanitw.github.io/paint/"
+    }
+];
+$scope.css3Components=[
+    {
+        name: "Navigation Patterns",
+        link:"http://pashanitw.github.io/Html5-Canvas-PolarClock"
+    },
+    {
+        name: "Side Bar",
+        link:"http://pashanitw.github.io/paint/"
+    },
+    {
+        name: "Hamburger menu",
+        link:"http://pashanitw.github.io/paint/"
+    },
+    {
+        name: "Toastr",
+        link:"http://pashanitw.github.io/paint/"
+    }
+];
+
     $scope.setProject = function (project) {
         $scope.currentProject = project;
         $scope.currentProjectUrl = $sce.trustAsResourceUrl($scope.currentProject.link);
