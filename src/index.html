@@ -71,6 +71,10 @@
         <li class="sidebar-list" ng-repeat="component in jsComponents">
           <a ng-click="setProject(component)">{{component.name}} <span class="menu-icon fa fa-tachometer"></span></a>
         </li>
+          <li class="sidebar-title"><span>CSS3</span></li>
+          <li class="sidebar-list" ng-repeat="component in css3">
+              <a ng-click="setProject(component)">{{component.name}} <span class="menu-icon fa fa-tachometer"></span></a>
+          </li>
         <li class="sidebar-title separator"><span>QUICK LINKS</span></li>
         <li class="sidebar-list">
           <a href="#" target="_blank">Forums <span class="menu-icon fa fa-external-link"></span></a>
